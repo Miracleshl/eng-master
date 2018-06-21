@@ -1,0 +1,42 @@
+#作者：意识流丶
+#链接：https://www.jianshu.com/p/e3cd2e1c2b0c
+#來源：简书
+# DATASOURCE
+#druid:
+druid.driverClassName: com.mysql.jdbc.Driver
+druid.url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC&useSSL=false
+druid.username: root
+druid.password: root
+druid.type: com.alibaba.druid.pool.DruidDataSource
+druid.initialSize: 0
+druid.minIdle: 3
+druid.maxActive: 8
+druid.maxWait: 60000
+druid.timeBetweenEvictionRunsMillis: 60000
+druid.minEvictableIdleTimeMillis: 300000
+druid.validationQuery: select 'x'
+druid.testWhileIdle: true
+druid.testOnBorrow: false
+druid.testOnReturn: false
+druid.poolPreparedStatements: true
+druid.maxPoolPreparedStatementPerConnectionSize: 20
+druid.filters: stat,wall,slf4j
+druid.connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+druid.useGlobalDataSourceStat: true
+
+#c3p0:
+#    jdbcUrl: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull&useSSL=false
+#    user: root
+#    password: root
+#    driverClass: com.mysql.jdbc.Driver
+#    minPoolSize: 2
+#    maxPoolSize: 10
+#    maxIdleTime: 300
+#    acquireIncrement: 3
+#    maxStatements: 1000
+#    initialPoolSize: 3
+#    idleConnectionTestPeriod: 60
+#    acquireRetryAttempts: 30
+#    acquireRetryDelay: 1000
+#    breakAfterAcquireFailure: false
+#    testConnectionOnCheckout: false

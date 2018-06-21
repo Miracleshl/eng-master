@@ -1,0 +1,31 @@
+#默认使用配置
+spring:
+  profiles:
+      active: dev
+
+#公共配置与profiles选择无关
+#mybatis配置
+mybatis:
+  #扫描mapper
+  mapperLocations: classpath:mapper/*.xml
+#服务器端口配置
+server:
+  port: 8084
+#log日志配置
+logging:
+  config: classpath:log4j2.yml
+#pageHelper分页插件配置
+pagehelper:
+  #helperDialect: mysql #标识是哪一种数据库，设计上必须。
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+  pageSizeZero: true #设置为true时，如果pageSize=0或者RowBounds.limit = 0就会查询出全部的结果
+  defaultCount: false #false不进行总数查询，默认进行总数查询
+  autoRuntimeDialect: true
+
+
+
+
+
+
